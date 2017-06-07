@@ -2,11 +2,11 @@
 //If the username is Morgan or Paul only return Hello!.
 
 function hello_person(username) {
-  if (username ) {
-    return 'Hello ' + username.toUpperCase() + '!';
-  }
-  else if (username === 'MORGAN' || 'PAUL') {
+  if (username=== 'MORGAN' || username === 'PAUL' ) {
     return 'HELLO!';
+  }
+  else if (username ) {
+    return 'Hello ' + username.toUpperCase() + '!';
   }
 }
 
