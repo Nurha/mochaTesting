@@ -6,6 +6,7 @@ var number_list = require('../js/number_list');
 var sum_numbers = require('../js/sum_numbers');
 var length = require('../js/length');
 var upper = require('../js/upper');
+var reverse = require('../js/reverse');
 
 var assert = require('assert');
 
@@ -65,6 +66,12 @@ describe('Functions', function() {
   describe('upper()', function() {
     it('should take a string and return it in uppercase letters', function() {
       assert.equal(upper('I love vegan food'), 'I LOVE VEGAN FOOD');
+    });
+  });
+
+  describe('reverse()', function() {
+    it('should reverse a given string', function() {
+      assert.equal(reverse('Pingo chips is yummy'), 'ymmuy si spihc ogniP');
     });
   });
 
