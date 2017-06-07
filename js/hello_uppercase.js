@@ -1,3 +1,6 @@
+//takes a username as a parameter and returns "Hello, USERNAME!".
+//If no username is supplied it should return "HELLO!".
+
 function hello_uppercase(username) {
   if (username) {
       return 'Hello ' + username.toUpperCase() + '!';

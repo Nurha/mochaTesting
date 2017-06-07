@@ -1,3 +1,5 @@
+//returns "hello"
+
 function hello() {
   return 'hello';
 };
