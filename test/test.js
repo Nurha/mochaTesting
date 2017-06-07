@@ -5,6 +5,7 @@ var hello_person = require('../js/hello_person');
 var number_list = require('../js/number_list');
 var sum_numbers = require('../js/sum_numbers');
 var length = require('../js/length');
+var upper = require('../js/upper');
 
 var assert = require('assert');
 
@@ -58,6 +59,12 @@ describe('Functions', function() {
   describe('length()', function() {
     it('should find the length of a string', function() {
       assert.equal(length('I love you'), 10);
+    });
+  });
+
+  describe('upper()', function() {
+    it('should take a string and return it in uppercase letters', function() {
+      assert.equal(upper('I love vegan food'), 'I LOVE VEGAN FOOD');
     });
   });
 
