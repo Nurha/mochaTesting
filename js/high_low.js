@@ -10,7 +10,12 @@ function high_low(numberOne, numberTwo, numberThree, numberFour) {
 
   var lowestNumber = Math.min(...numberList);
 
-  return highestNumber + ' ' + lowestNumber;
+  var highestNumberAndLowestNumber = [];
+
+  highestNumberAndLowestNumber.push(highestNumber);
+  highestNumberAndLowestNumber.push(lowestNumber);
+
+  return highestNumberAndLowestNumber;
 }
 
 console.log(high_low(15, 1, 9, 4));

@@ -8,6 +8,7 @@ var length = require('../js/length');
 var upper = require('../js/upper');
 var reverse = require('../js/reverse');
 var hello_list = require('../js/hello_list');
+var high_low = require('../js/high_low');
 
 var assert = require('assert');
 
@@ -79,6 +80,12 @@ describe('Functions', function() {
   describe('hello_list', function() {
     it('should print hello for the number of times in the parameter', function () {
       assert.deepEqual(hello_list(2), ['hello', 'hello']);
+    });
+  });
+
+  describe('high_low', function() {
+    it('should print the highest and lowest numbers of a given array', function () {
+      assert.deepEqual(high_low(1, 78, 29, 4), [78, 1]);
     });
   });
 
