@@ -10,7 +10,11 @@ function cricket(numberOfCricketChripsInFifteenSeconds) {
 var numberOfChirpsInAMinute = numberOfCricketChripsInFifteenSeconds * 4;
 
 var temperatureInFarenheit = (numberOfChirpsInAMinute + 40) / 4;
-return  temperatureInFarenheit
+
+var tempToTheNearesHalfADegree =   temperatureInFarenheit / 2;
+
+ return tempToTheNearesHalfADegree;
+
 }
 
 console.log(cricket(30));
