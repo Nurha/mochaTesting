@@ -7,6 +7,7 @@ var sum_numbers = require('../js/sum_numbers');
 var length = require('../js/length');
 var upper = require('../js/upper');
 var reverse = require('../js/reverse');
+var hello_list = require('../js/hello_list');
 
 var assert = require('assert');
 
@@ -72,6 +73,12 @@ describe('Functions', function() {
   describe('reverse()', function() {
     it('should reverse a given string', function() {
       assert.equal(reverse('Pingo chips is yummy'), 'ymmuy si spihc ogniP');
+    });
+  });
+
+  describe('hello_list', function() {
+    it('should print hello for the number of times in the parameter', function () {
+      assert.deepEqual(hello_list(2), ['hello', 'hello']);
     });
   });
 
