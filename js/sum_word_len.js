@@ -3,14 +3,14 @@
 
 function sum_word_len(string) {
 
-  var sumNumbers = 0;
+  var sumStringNumbers = 0;
 
   var stringNumber = string.split(' ').length;
 
   for (i=0; i<=stringNumber; i++) {
-    sumNumbers += i;
+    sumStringNumbers += i;
   }
-  return sumNumbers;
+  return sumStringNumbers;
 }
 
 console.log(sum_word_len('cow cow cow'));

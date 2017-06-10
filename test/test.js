@@ -10,6 +10,7 @@ var reverse = require('../js/reverse');
 var hello_list = require('../js/hello_list');
 var high_low = require('../js/high_low');
 var count_words = require('../js/count_words');
+var sum_word_len = require('../js/sum_word_len');
 
 var assert = require('assert');
 
@@ -62,7 +63,7 @@ describe('Functions', function() {
 
   describe('length()', function() {
     it('should find the length of a string', function() {
-      assert.equal(length('I love you'), 10);
+      assert.equal(length('I love you'), 3);
     });
   });
 
@@ -93,6 +94,12 @@ describe('Functions', function() {
   describe('count_words()', function() {
     it('it should count the words in a string', function() {
       assert.equal(count_words('I love vegan food'), 4);
+    });
+  });
+
+  describe('sum_word_len()', function() {
+    it('should sum the length of a string', function() {
+      assert.equal(sum_word_len('cow cow cow'), 6);
     });
   });
 

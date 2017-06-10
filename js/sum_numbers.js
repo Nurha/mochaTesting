@@ -3,12 +3,14 @@
 
 function sum_numbers(number) {
 
-  var addedNumbers = 0;
-  for (i=1; i<=number; i++) {
-    addedNumbers += i;
+  var sumNumbers = 0;
+
+  for (i=0; i<=number; i++) {
+    sumNumbers += i;
   }
-  return addedNumbers;
+  return sumNumbers;
 }
 
 console.log(sum_numbers(3));
+
 module.exports = sum_numbers;

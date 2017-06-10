@@ -2,7 +2,7 @@
 //returns the length of it
 
 function length(string) {
-  return string.length;
+  return string.split(' ').length;
 }
 
 console.log(length('I love you'));

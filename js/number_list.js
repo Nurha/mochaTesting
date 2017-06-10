@@ -5,7 +5,7 @@ function number_list(number) {
 
   var numberList = [];
 
-  for (i=0; i<=number; i++) {
+  for (i=1; i<=number; i++) {
     numberList.push(i);
   }
 
