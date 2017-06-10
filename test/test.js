@@ -9,6 +9,7 @@ var upper = require('../js/upper');
 var reverse = require('../js/reverse');
 var hello_list = require('../js/hello_list');
 var high_low = require('../js/high_low');
+var count_words = require('../js/count_words');
 
 var assert = require('assert');
 
@@ -86,6 +87,12 @@ describe('Functions', function() {
   describe('high_low', function() {
     it('should print the highest and lowest numbers of a given array', function () {
       assert.deepEqual(high_low(1, 78, 29, 4), [78, 1]);
+    });
+  });
+
+  describe('count_words()', function() {
+    it('it should count the words in a string', function() {
+      assert.equal(count_words('I love vegan food'), 4);
     });
   });
 

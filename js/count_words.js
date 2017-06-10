@@ -3,10 +3,10 @@
 
 function count_words(string) {
 
-  return string.length;
+  return string.split(' ').length;
 
 }
 
-console.log(count_words('I love pudding'));
+console.log(count_words('True love is not finding the perfect person, learning to see an imperfect person perfectly'));
 
 module.exports = count_words;
