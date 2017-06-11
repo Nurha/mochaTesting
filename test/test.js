@@ -11,6 +11,7 @@ var hello_list = require('../js/hello_list');
 var high_low = require('../js/high_low');
 var count_words = require('../js/count_words');
 var sum_word_len = require('../js/sum_word_len');
+var longest_word = require('../js/longest_word');
 
 var assert = require('assert');
 
@@ -100,6 +101,12 @@ describe('Functions', function() {
   describe('sum_word_len()', function() {
     it('should sum the length of a string', function() {
       assert.equal(sum_word_len('cow cow cow'), 6);
+    });
+  });
+
+  describe('longest_word()', function() {
+    it('should find the longest word in a string with number and letters in that string', function() {
+      assert.deepEqual(longest_word('Almond mozzarella cheese pizza'), [10, 'mozzarella']);
     });
   });
 
