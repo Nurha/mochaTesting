@@ -13,14 +13,13 @@ function shortest_word(string) {
   var shortestWord = newString[0];
 
   for(i=0; i<newString.length; i++) {
-    if(newString[i] !== null)  {
-      if(shortestWord.length > newString[i].length) {
-        shortestWord = newString[i]
-      }
+    if(shortestWord.length > newString[i].length) {
+      shortestWord = newString[i]
     }
+
   }
   return shortestWord + ' ' + shortestWord.length;
 }
 
-console.log(shortest_word('ate so much cheese today'));
+console.log(shortest_word('aaaaa dddd vv hhhhh uuu'));
 module.exports = shortest_word;
