@@ -11,15 +11,20 @@
 function shortest_word(string) {
   var newString = string.split(' ');
   var shortestWord = newString[0];
+  var wordLength = 0;
+
+  var wordAndLength = [];
 
   for(i=0; i<newString.length; i++) {
     if(shortestWord.length > newString[i].length) {
-      shortestWord = newString[i]
+      shortestWord = newString[i];
+      wordLength = newString[i].length;
     }
-
   }
-  return shortestWord + ' ' + shortestWord.length;
+  wordAndLength.push(wordLength)
+  wordAndLength.push(shortestWord)
+  return wordAndLength;
 }
 
-console.log(shortest_word('aaaaa dddd vv hhhhh uuu'));
+console.log(shortest_word('ate so much cheese on the pizza'));
 module.exports = shortest_word;
