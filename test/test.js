@@ -12,6 +12,7 @@ var high_low = require('../js/high_low');
 var count_words = require('../js/count_words');
 var sum_word_len = require('../js/sum_word_len');
 var longest_word = require('../js/longest_word');
+var shortest_word = require('../js/shortest_word');
 
 var assert = require('assert');
 
@@ -107,6 +108,12 @@ describe('Functions', function() {
   describe('longest_word()', function() {
     it('should find the longest word in a string with number and letters in that string', function() {
       assert.deepEqual(longest_word('Almond mozzarella cheese pizza'), [10, 'mozzarella']);
+    });
+  });
+
+  describe('shortest_word()', function() {
+    it('should find the shortest word and return it with it\'s length', function() {
+      assert.deepEqual(shortest_word('ate so much cheese on the pizza'), [ 2, 'so']);
     });
   });
 
