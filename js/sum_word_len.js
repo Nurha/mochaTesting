@@ -3,16 +3,17 @@
 
 function sum_word_len(string) {
 
-  var sumStringNumbers = 0;
+  var splitString = string.split(' ');
+  console.log(splitString);
+  var sumWords = 0;
 
-  var stringNumber = string.split(' ').length;
-
-  for (i=0; i<=stringNumber; i++) {
-    sumStringNumbers += i;
+  for (i=0; i<splitString.length; i++) {
+    sumWords += splitString[i].length;
   }
-  return sumStringNumbers;
+  return sumWords;
 }
 
-console.log(sum_word_len('cow cow cow'));
+console.log(sum_word_len('Hello human, I am an alien')),
 
 module.exports = sum_word_len;
+
