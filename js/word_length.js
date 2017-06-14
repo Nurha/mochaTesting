@@ -5,15 +5,14 @@
 function word_length(string) {
 
   var splitString = string.split(' ');
-  var words = splitString[0];
+  var wordsLength = 0;
 
   for (i=0; i<splitString.length; i++) {
-    console.log(splitString[i].length)
-    splitString.length += splitString[i].length
+    wordsLength += splitString[i].length;
   }
-  return 
+  return wordsLength;
 }
 
-console.log(word_length('I love food'));
+console.log(word_length('I love food i'));
 
 module.exports = word_length;
