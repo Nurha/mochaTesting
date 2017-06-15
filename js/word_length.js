@@ -3,23 +3,27 @@
 // sum up all the numbers and divide by the amount of numbers
 
 function word_length(string) {
-
+  
   var splitString = string.split(' ');
   var sumWordsLength = 0;
-
   var numberOfWords = string.split(' ').length;
   //console.log(numberOfWords);
-
   var averageNumber = 0;
+
+  var averageRoundedUpAndDown = [];
 
   for (i=0; i<splitString.length; i++) {
     sumWordsLength += splitString[i].length;
-    console.log(sumWordsLength);
+    //console.log(sumWordsLength);
   }
   
-
   averageNumber = sumWordsLength / numberOfWords;
-  return averageNumber;
+  var averageRoundedUp = Math.ceil(averageNumber);
+  var averageRoundedDown = Math.floor(averageNumber);
+  averageRoundedUpAndDown.push(averageRoundedUp);
+  averageRoundedUpAndDown.push(averageRoundedDown);
+
+  return averageRoundedUpAndDown;
 }
 
 console.log(word_length('Cow cow cow love patty'));
