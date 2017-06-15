@@ -5,14 +5,23 @@
 function word_length(string) {
 
   var splitString = string.split(' ');
-  var wordsLength = 0;
+  var sumWordsLength = 0;
+
+  var numberOfWords = string.split(' ').length;
+  //console.log(numberOfWords);
+
+  var averageNumber = 0;
 
   for (i=0; i<splitString.length; i++) {
-    wordsLength += splitString[i].length;
+    sumWordsLength += splitString[i].length;
+    console.log(sumWordsLength);
   }
-  return wordsLength;
+  
+
+  averageNumber = sumWordsLength / numberOfWords;
+  return averageNumber;
 }
 
-console.log(word_length('I love food i'));
+console.log(word_length('Cow cow cow love patty'));
 
 module.exports = word_length;
