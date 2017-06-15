@@ -14,6 +14,7 @@ var sum_word_len = require('../js/sum_word_len');
 var longest_word = require('../js/longest_word');
 var shortest_word = require('../js/shortest_word');
 var word_length = require('../js/word_length');
+var avg = require('../js/avg');
 
 var assert = require('assert');
 
@@ -121,6 +122,12 @@ describe('Functions', function() {
   describe('word_length()', function() {
     it('should return string average number rounded up and down', function() {
       assert.deepEqual(word_length('cow cow cow love patty'), [ 4, 3 ]);
+    });
+  });
+
+  describe('avg()', function() {
+    it('should return the average of the length of a string rounded up', function() {
+      assert.equal(avg('hello happy cow from space'), 5);
     });
   });
 
