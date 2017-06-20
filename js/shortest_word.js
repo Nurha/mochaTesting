@@ -3,15 +3,15 @@
 
 function shortest_word(string) {
   var newString = string.split(' ');
-  var shortestWord = newString[1];
-  var wordLength = 0;
+  var shortestWord = newString[0];
+  var wordLength = shortestWord.length;
 
   var wordAndLength = [];
 
   for(i=0; i<newString.length; i++) {
-    if(shortestWord.length > newString[i].length) {
+    if(newString[i].length < wordLength) {
       shortestWord = newString[i];
-      wordLength = newString[i].length;
+      wordLength = shortestWord.length;
     }
   }
   wordAndLength.push(wordLength)
@@ -19,5 +19,7 @@ function shortest_word(string) {
   return wordAndLength;
 }
 
-console.log(shortest_word('cow co c'));
+console.log(shortest_word('I much cheese on the pizza'));
 module.exports = shortest_word;
+
+
