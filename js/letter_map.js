@@ -4,12 +4,13 @@
 // The values should be an array of any words in the sentence that start with the key of the map. 
 // eg "Let's do this today" should return {"L" : ["Let's"], d : ["do"], "t" : ["this", "today"]}.
 
-function letterMap(string) {
-
+function letter_map(string) {
   var splitString = string.split(' ');
+  var map = splitString.map(function(words) {
+    
+  });
 
 }
+console.log(letter_map('Let\'s do it today'));
 
-console.log('Lets have pizza for supper');
-
-module.exports = letterMap;
+module.exports = letter_map;
