@@ -14,6 +14,7 @@ function letter_map(string) {
     letter += words[i].substring(0,1);
     letters.push(letter[i]);
     letterObj[letters[i]] = [ ];
+    letterObj[letters[i]].push(words[i]);
   }
 
    console.log(letterObj);
