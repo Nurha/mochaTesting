@@ -5,11 +5,19 @@
 // eg "Let's do this today" should return {"L" : ["Let's"], d : ["do"], "t" : ["this", "today"]}.
 
 function letter_map(string) {
-  var splitString = string.split(' ');
-  var map = splitString.map(function(words) {
-    
-  });
+  var words = string.split(' ');
+  var letter = '';
+  var letters = [ ];
+  var letterObj = { };
 
+  for (i=0; i<words.length; i++) {
+    letter += words[i].substring(0,1);
+    letters.push(letter[i]);
+  }
+
+  letterObj[letters];
+  
+  console.log(letterObj);
 }
 console.log(letter_map('Let\'s do it today'));
 
