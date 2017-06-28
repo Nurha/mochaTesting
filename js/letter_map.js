@@ -14,17 +14,17 @@ function letter_map(string) {
     letter += words[i][0];
     letters.push(letter[i]);
     letterObj[letters[i]] = [ ];
-    for (j=0; j<words[i][0]; j++) {
-      if (letterObj[letters[i]] === words[i][0]) {
-        letterObj[letters[i]].push(words[i]);
-      }; 
-      
-    };
+    letterObj[letters[i]].push(words[i]);
+    //  for (j=0; j<words[i].length; j++) {
+    //    if (words[i][0] === letterObj[letters[i]]) {
+        
+    //    };
+    //  };
+    console.log(letterObj);
   };
-   console.log(letterObj);
+  return letterObj;
 };
 console.log(letter_map('Let\'s do it today and then see what happens tomorrow'));
-
 module.exports = letter_map;
 
 // function letter_map(str) {
