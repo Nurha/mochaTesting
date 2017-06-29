@@ -14,18 +14,28 @@ function letter_map(string) {
     letter += words[i][0];
     letters.push(letter[i]);
     letterObj[letters[i]] = [ ];
-    letterObj[letters[i]].push(words[i]);
-    //  for (j=0; j<words[i].length; j++) {
-    //    if (words[i][0] === letterObj[letters[i]]) {
-        
-    //    };
-    //  };
-    console.log(letterObj);
+    for (j=0; j<Object.keys(letterObj).length; j++) {
+      if (words[i][0] === Object.keys(letterObj)[j]) {
+        letterObj[letters[i]].push(words[i]);
+      }
+      console.log(Object.keys(letterObj));
+    }
   };
   return letterObj;
 };
 console.log(letter_map('Let\'s do it today and then see what happens tomorrow'));
 module.exports = letter_map;
+
+
+
+
+
+
+
+
+
+
+
 
 // function letter_map(str) {
 //  var string = str.split(" ");
