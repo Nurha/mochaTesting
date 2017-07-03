@@ -9,6 +9,8 @@ function triangle(character) {
     for (j=0; j<count; j++) {
       shape += character;
     };
+    count++;
+    shape += '\n';
   };
   return shape;
 };
