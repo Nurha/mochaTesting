@@ -16,6 +16,7 @@ var shortest_word = require('../js/shortest_word');
 var word_length = require('../js/word_length');
 var avg = require('../js/avg');
 var tri = require('../js/tri');
+var tri_char = require('../js/tri_char');
 
 var assert = require('assert');
 
@@ -137,5 +138,11 @@ describe('Functions', function() {
       assert.deepEqual(tri(), '\n*\n**\n***\n****\n');
     });
   });
+
+  describe('tri_char()', function() {
+    it('should make the shape of a triangle using a given character', function() {
+      assert.deepEqual(tri_char('*'), '\n*\n**\n***\n****\n' )
+    });
+  })
 
 });
