@@ -8,7 +8,7 @@ function tri() {
 
   for (i=0; i<=base; i++) {
      for (j=0; j<count; j++) {
-       shape += ' *';
+       shape += '*';
      }
      count++;
      shape += '\n';
