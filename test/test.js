@@ -15,6 +15,8 @@ var longest_word = require('../js/longest_word');
 var shortest_word = require('../js/shortest_word');
 var word_length = require('../js/word_length');
 var avg = require('../js/avg');
+var letter_map = require('../js/letter_map');
+//var starts = require('..js/starts');
 var tri = require('../js/tri');
 var tri_char = require('../js/tri_char');
 
@@ -130,6 +132,12 @@ describe('Functions', function() {
   describe('avg()', function() {
     it('should return the average of the length of a string rounded up', function() {
       assert.equal(avg('hello happy cow from space'), 5);
+    });
+  });
+
+  describe('letter_map()', function() {
+    it('should return a map object of the first letters of the words in a string and the words', function() {
+      assert.deepEqual(letter_map('Hello people of the planet'), {'H' : ['Hello'], 'p' : ['people', 'planet'], 'o' : ['of'], 't' : ['the']});
     });
   });
 
