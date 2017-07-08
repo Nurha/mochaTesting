@@ -11,12 +11,12 @@ var numberOfChirpsInAMinute = numberOfCricketChripsInFifteenSeconds * 4;
 
 var temperatureInFarenheit = (numberOfChirpsInAMinute + 40) / 4;
 
-var tempToTheNearesHalfADegree =   temperatureInFarenheit / 2;
+var tempToTheNearesHalfADegree = Math.round(temperatureInFarenheit*2) /2;
 
  return tempToTheNearesHalfADegree;
 
 }
 
-console.log(cricket(30));
+console.log(cricket(25));
 
 module.exports = cricket;
