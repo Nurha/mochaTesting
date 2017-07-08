@@ -19,6 +19,7 @@ var letter_map = require('../js/letter_map');
 var starts = require('../js/starts');
 var tri = require('../js/tri');
 var tri_char = require('../js/tri_char');
+var cricket = require('../js/cricket');
 
 var assert = require('assert');
 
@@ -156,6 +157,12 @@ describe('Functions', function() {
   describe('tri_char()', function() {
     it('should make the shape of a triangle using a given character', function() {
       assert.deepEqual(tri_char('*'), '\n*\n**\n***\n****\n' )
+    });
+  })
+
+  describe('cricket()', function() {
+    it('should use criicket chirps to calculate the temperature to the nearest half degree', function() {
+      assert.equal(cricket(25), 35);
     });
   })
 
