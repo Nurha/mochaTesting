@@ -1,21 +1,21 @@
-// a sentence as a parameter and returns the letter most words starts with
+// a sentence as a parameter 
+//and returns the letter most words starts with
 
-function starts(string) {
-//   var sentenceArr = string.split(' ');
-//   console.log(sentenceArr);
-//   var letters = '';
-//   var mostLetter = '';
+function starts(sentence) {
+  var splitSen = sentence.split(' ');
+  var map = {};
+  var count= 0;
+  var occursMost = '';
+  
+  splitSen.forEach(function(word) {
+    var firstLetters = word[0].toLowerCase();
+    if (map[firstLetters]) {
+      map[firstLetters].push(word);
+    }
+  });
+  console.log(map);
+return occursMost;
+};
 
-//   for (i=0; i<sentenceArr.length; i++) {
-//     letters += sentenceArr[i][0];
-//     for (j=0; j<letters.length; j++) {
-//       if (letters[i] === letters[i]) {
-//         mostLetter.push(letters[i]);
-//       }
-//     }
-//   }
-//return letters;
-}
-
-console.log(starts('I like bananas and I want cream cakes to'));
+console.log(starts('Soups sooo good in winter but summers no'));
 module.exports = starts;
