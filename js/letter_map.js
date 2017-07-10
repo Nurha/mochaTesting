@@ -4,54 +4,24 @@
 // The values should be an array of any words in the sentence that start with the key of the map. 
 // eg "Let's do this today" should return {"L" : ["Let's"], d : ["do"], "t" : ["this", "today"]}.
 
-function letter_map(string) {
-  var words = string.split(' ');
-  var letter = '';
-  var letters = [ ];
-  var letterObj = { };
-
-  for (i=0; i<words.length; i++) {
-    letter += words[i][0];
-    letters.push(letter[i]);
-    letterObj[letters[i]] = [ ];
-    for (j=0; j<Object.keys(letterObj).length; j++) {
-      if (words[i][0] === Object.keys(letterObj)[j]) {
-        letterObj[letters[i]].push(words[i]);
-      }
-      console.log(Object.keys(letterObj));
+function letter_map(sentence) {
+  var splitSen = sentence.split(' ');
+  var map = {};
+  
+  splitSen.forEach(function(word) {
+    var letter = word[0].toLowerCase();
+    if (map[letter]) {
+      map[letter].push(word);
     }
-  };
-  return letterObj;
+    //  otherwise create a key with the first letter of the word and assign an empty array to it
+    // then push the word to the array
+    else {
+      map[letter] = [];
+      map[letter].push(word);
+    }
+  });
+return map;
 };
-console.log(letter_map('Let\'s do it today and then see what happens tomorrow'));
+
+console.log(letter_map('Let\'s do this today then see what happens tomorrow'))
 module.exports = letter_map;
-
-
-
-
-
-
-
-
-
-
-
-
-// function letter_map(str) {
-//  var string = str.split(" ");
-//  var wordmap = {};
-//  var words = [];
-
-//  string.forEach(function(word){
-//    if(wordmap[word[0]] !== undefined){
-//      wordmap[word[0]].push(word);
-//    } else {
-//      words.push(word);
-//      wordmap[word[0]] = words}
-//      words = [];
-//  });
-// return wordmap
-// }
-// console.log(letter_map('Let\'s see what happend today, and deal with it tomorrow ??????!!!!!!!'));
-
-// module.exports = letter_map;
