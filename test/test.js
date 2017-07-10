@@ -17,6 +17,8 @@ var word_length = require('../js/word_length');
 var avg = require('../js/avg');
 var letter_map = require('../js/letter_map');
 var starts = require('../js/starts');
+var draw = require('../js/draw');
+var square_stars = require('../js/square_stars');
 var tri = require('../js/tri');
 var tri_char = require('../js/tri_char');
 var cricket = require('../js/cricket');
@@ -136,15 +138,27 @@ describe('Functions', function() {
     });
   });
 
-  describe('letter_map()', function() {
-    it('should return a map object of the first letters of the words in a string and the words', function() {
-      assert.deepEqual(letter_map('Hello people of the planet'), {'H' : ['Hello'], 'p' : ['people', 'planet'], 'o' : ['of'], 't' : ['the']});
+  // describe('letter_map()', function() {
+  //   it('should return a map object of the first letters of the words in a string and the words', function() {
+  //     assert.deepEqual(letter_map('Hello people of the planet'), {'H' : ['Hello'], 'p' : ['people', 'planet'], 'o' : ['of'], 't' : ['the']});
+  //   });
+  // });
+
+  // describe('starts()', function() {
+  //   it('should find the letter most words start with', function() {
+  //     assert.equal(starts('Today is the third day'), 't');
+  //   });
+  // });
+
+  describe('draw()', function() {
+    it('should print a line of ****', function() {
+      assert.equal(draw('*', '*', '*', '*'), '****');
     });
   });
 
-  describe('starts()', function() {
-    it('should find the letter most words start with', function() {
-      assert.equal(starts('Today is the third day'), 't');
+  describe('square_stars()', function() {
+    it('should  print a square using *', function() {
+      assert.equal(square_stars(4), '****\n****\n****\n****\n');
     });
   });
 
