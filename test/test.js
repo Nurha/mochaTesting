@@ -138,11 +138,11 @@ describe('Functions', function() {
     });
   });
 
-  // describe('letter_map()', function() {
-  //   it('should return a map object of the first letters of the words in a string and the words', function() {
-  //     assert.deepEqual(letter_map('Hello people of the planet'), {'H' : ['Hello'], 'p' : ['people', 'planet'], 'o' : ['of'], 't' : ['the']});
-  //   });
-  // });
+  describe('letter_map()', function() {
+    it('should return a map object of the first letters of the words in a string and the words', function() {
+      assert.deepEqual(letter_map('Hello people of the planet'), {'h' : ['Hello'], 'p' : ['people', 'planet'], 'o' : ['of'], 't' : ['the']});
+    });
+  });
 
   // describe('starts()', function() {
   //   it('should find the letter most words start with', function() {
