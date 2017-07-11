@@ -4,7 +4,6 @@
 function starts(sentence) {
   var splitSen = sentence.split(' ');
   var map = {};
-  var count= 0;
   var occursMost = '';
   
   splitSen.forEach(function(word) {
@@ -12,8 +11,18 @@ function starts(sentence) {
     if (map[firstLetters]) {
       map[firstLetters].push(word);
     }
+    else {
+      map[firstLetters] = [];
+      map[firstLetters].push(word);
+    }
   });
-  console.log(map);
+Object.values(map).forEach(function(array) {
+  console.log(array.length);
+});
+
+  // console.log(map);
+  // console.log(Object.keys(map));
+  // console.log(Object.values(map));
 return occursMost;
 };
 
