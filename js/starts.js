@@ -4,6 +4,7 @@
 function starts(sentence) {
   var splitSen = sentence.split(' ');
   var map = {};
+  var maxLength = 0;
   var occursMost = '';
   
   splitSen.forEach(function(word) {
@@ -16,15 +17,14 @@ function starts(sentence) {
       map[firstLetters].push(word);
     }
   });
-Object.values(map).forEach(function(array) {
-  console.log(array.length);
+  Object.values(map).forEach(function(array) {
+  if (array.length > maxLength) {
+    maxLength = array.length;
+    occursMost = array[0][0].toLowerCase();
+  }
 });
-
-  // console.log(map);
-  // console.log(Object.keys(map));
-  // console.log(Object.values(map));
 return occursMost;
 };
 
-console.log(starts('Soups sooo good in winter but summers no'));
+console.log(starts('cow cow fish bird cow dragon dragon dragon dragon dragon'));
 module.exports = starts;
