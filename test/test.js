@@ -144,11 +144,11 @@ describe('Functions', function() {
     });
   });
 
-  // describe('starts()', function() {
-  //   it('should find the letter most words start with', function() {
-  //     assert.equal(starts('Today is the third day'), 't');
-  //   });
-  // });
+  describe('starts()', function() {
+    it('should find the letter most words start with', function() {
+      assert.equal(starts('Today is the third day'), 't');
+    });
+  });
 
   describe('draw()', function() {
     it('should print a line of ****', function() {
