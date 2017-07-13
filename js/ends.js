@@ -25,11 +25,11 @@ function ends(string) {
     // console.log(array)
     if (array.length > maxLength) {
       maxLength = array.length;
-      occursMost = array[array.length - 1].toLowerCase();
+      occursMost = array[0][array.length - 1].toLowerCase();
     }
   });
   return occursMost;
 }
 
-console.log(ends('hed end of the dayd'));
+console.log(ends('heds ss end of the dayd sss ss'));
 module.exports = ends;
