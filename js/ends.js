@@ -25,7 +25,7 @@ function ends(string) {
     // console.log(array)
     if (array.length > maxLength) {
       maxLength = array.length;
-      occursMost = array[0][array.length - 1].toLowerCase();
+      occursMost = array[0][array.length - 1];
     }
   });
   return occursMost;

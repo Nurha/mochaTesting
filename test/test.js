@@ -17,6 +17,7 @@ var word_length = require('../js/word_length');
 var avg = require('../js/avg');
 var letter_map = require('../js/letter_map');
 var starts = require('../js/starts');
+var ends = require('../js/ends');
 var draw = require('../js/draw');
 var square_stars = require('../js/square_stars');
 var tri = require('../js/tri');
@@ -147,6 +148,12 @@ describe('Functions', function() {
   describe('starts()', function() {
     it('should find the letter most words start with', function() {
       assert.equal(starts('Today is the third day'), 't');
+    });
+  });
+
+  describe('ends()', function() {
+    it('should return the letter most words end with', function() {
+      assert.equal(ends('this is his sisters keys so do not lose them', 's'));
     });
   });
 
