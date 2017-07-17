@@ -18,6 +18,7 @@ var avg = require('../js/avg');
 var letter_map = require('../js/letter_map');
 var starts = require('../js/starts');
 var ends = require('../js/ends');
+var occurs_most = require('../js/occurs_most');
 var draw = require('../js/draw');
 var square_stars = require('../js/square_stars');
 var tri = require('../js/tri');
@@ -154,6 +155,12 @@ describe('Functions', function() {
   describe('ends()', function() {
     it('should return the letter most words end with', function() {
       assert.equal(ends('this is his sisters keys so do not lose them', 's'));
+    });
+  });
+
+  describe('occurs_most()', function() {
+    it('should return the letter most words end with', function() {
+      assert.equal(occurs_most('this letter occurs the most in this strinp'), 't');
     });
   });
 
