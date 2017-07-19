@@ -3,13 +3,17 @@
  
 function occurs_least(string) {
   string = string.replace(/\s+/g, '');
+  var splitString = string.split('');
   var letterMap = {};
 
-  for (i=0; i<string.length; i++) {
-    var letter = string[i];
-    letterMap[letter] = (letterMap[letter] || 0) + 1;
-  }
-  console.log(letterMap);
+  splitString.forEach(function(letter) {
+    letterMap[letter] = (letterMap[letter] || 0)  + 1;
+  });
+
+  Object.values(letterMap).forEach(function(letterMapVal) {
+    console.log(letterMapVal);
+  });
+
 }
 
 console.log(occurs_least('Q is the letter that is ooccuuring the least in this string '));
