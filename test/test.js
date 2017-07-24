@@ -1,4 +1,3 @@
-var add = require('../js/add');
 var hello = require('../js/hello');
 var hello_uppercase = require('../js/hello_uppercase');
 var hello_person = require('../js/hello_person');
@@ -24,17 +23,13 @@ var draw = require('../js/draw');
 var square_stars = require('../js/square_stars');
 var tri = require('../js/tri');
 var tri_char = require('../js/tri_char');
+var add = require('../js/add');
+var divide = require('../js/divide');
 var cricket = require('../js/cricket');
 
 var assert = require('assert');
 
 describe('Functions', function() {
-
-  describe('add()', function() {
-    it('should return 3 when adding 1 and 2', function() {
-      assert.equal(add(1, 2), 3);
-    });
-  });
 
   describe('hello()', function() {
     it('should return hello', function() {
@@ -193,7 +188,19 @@ describe('Functions', function() {
     it('should make the shape of a triangle using a given character', function() {
       assert.deepEqual(tri_char('*'), '\n*\n**\n***\n****\n' )
     });
-  })
+  });
+
+  describe('add()', function() {
+    it('should return 3 when adding 1 and 2', function() {
+      assert.equal(add(1, 2), 3);
+    });
+  });
+
+  describe('divide()', function() {
+    it('should divide the to given numbers', function() {
+      assert.equal(divide(12, 3), 4);
+    });
+  });
 
   describe('cricket()', function() {
     it('should use criicket chirps to calculate the temperature to the nearest half degree', function() {
