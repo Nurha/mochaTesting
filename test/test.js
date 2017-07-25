@@ -25,6 +25,7 @@ var tri = require('../js/tri');
 var tri_char = require('../js/tri_char');
 var add = require('../js/add');
 var divide = require('../js/divide');
+var calc_all = require('../js/calc_all');
 var cricket = require('../js/cricket');
 
 var assert = require('assert');
@@ -199,6 +200,12 @@ describe('Functions', function() {
   describe('divide()', function() {
     it('should divide the to given numbers', function() {
       assert.equal(divide(12, 3), 4);
+    });
+  });
+
+  describe('cal_all()', function() {
+    it('should do calculations based on the symbol used', function() {
+      assert.equal(calc_all(10, 2, '/'), 5);
     });
   });
 
