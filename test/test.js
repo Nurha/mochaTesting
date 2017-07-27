@@ -21,6 +21,7 @@ var occurs_most = require('../js/occurs_most');
 var occurs_least = require('../js/occurs_least');
 var draw = require('../js/draw');
 var square_stars = require('../js/square_stars');
+var square = require('../js/square');
 var tri = require('../js/tri');
 var tri_char = require('../js/tri_char');
 var add = require('../js/add');
@@ -176,6 +177,12 @@ describe('Functions', function() {
   describe('square_stars()', function() {
     it('should  print a square using *', function() {
       assert.equal(square_stars(4), '****\n****\n****\n****\n');
+    });
+  });
+
+  describe('square()', function() {
+    it('should print a 4*4 square using a given character', function() {
+      assert.equal(square('*'), '****\n****\n****\n****\n');
     });
   });
 
