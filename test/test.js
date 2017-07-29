@@ -25,6 +25,7 @@ var square = require('../js/square');
 var tri = require('../js/tri');
 var tri_char = require('../js/tri_char');
 var square_param_base = require('../js/square_param_base');
+var diamond = require('../js/diamond');
 var add = require('../js/add');
 var divide = require('../js/divide');
 var calc_all = require('../js/calc_all');
@@ -202,6 +203,12 @@ describe('Functions', function() {
   describe('square_param_base()', function() {
     it('should make a square using the given parameters', function() {
       assert.equal(square_param_base('*', 4), '****\n****\n****\n****\n');
+    });
+  });
+
+  describe('diamond()', function() {
+    it('should make a diamond out of * characters', function() {
+      assert.equal(diamond(),'\n    * \n   * * \n  * * * \n * * * * \n* * * * * \n * * * * \n  * * * \n   * * \n    * \n')
     });
   });
 
