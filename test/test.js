@@ -26,6 +26,7 @@ var tri = require('../js/tri');
 var tri_char = require('../js/tri_char');
 var square_param_base = require('../js/square_param_base');
 var diamond = require('../js/diamond');
+var diamond_base = require('../js/diamond_base');
 var add = require('../js/add');
 var divide = require('../js/divide');
 var calc_all = require('../js/calc_all');
@@ -208,7 +209,13 @@ describe('Functions', function() {
 
   describe('diamond()', function() {
     it('should make a diamond out of * characters', function() {
-      assert.equal(diamond(),'\n    * \n   * * \n  * * * \n * * * * \n* * * * * \n * * * * \n  * * * \n   * * \n    * \n')
+      assert.equal(diamond(),'\n    * \n   * * \n  * * * \n * * * * \n* * * * * \n * * * * \n  * * * \n   * * \n    * \n');
+    });
+  });
+  
+  describe('diamond()', function() {
+    it('should make a diamond shape using a given character', function() {
+      assert.equal(diamond_base(character), '\n    * \n   * * \n  * * * \n * * * * \n* * * * * \n * * * * \n  * * * \n   * * \n    * \n');
     });
   });
 
